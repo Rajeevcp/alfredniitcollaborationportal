@@ -1,0 +1,10 @@
+com\rest\springmvc\services\PersonServiceImpl.class
+com\rest\springmvc\configuration\WebAppInitializer.class
+com\rest\springmvc\configuration\WebAppConfig.class
+com\rest\springmvc\dao\PersonDao.class
+com\rest\springmvc\controller\PersonController.class
+com\rest\springmvc\model\Person.class
+com\rest\springmvc\dao\PersonDaoImpl.class
+com\rest\springmvc\model\Test.class
+com\rest\springmvc\services\PersonService.class
+com\rest\springmvc\configuration\DBConfig.class
