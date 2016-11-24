@@ -33,5 +33,9 @@ public class PersonServiceImpl implements PersonService
 	public void savePerson(Person person) {
 		personDao.savePerson(person);
 	}
+	
+	public Person updatePerson(int id, Person person) {
+		return personDao.updatePerson(id, person);
+	}
 
 }
