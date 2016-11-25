@@ -38,4 +38,8 @@ public class PersonServiceImpl implements PersonService
 		return personDao.updatePerson(id, person);
 	}
 
+	public void deletePerson(int id) {
+		personDao.deletePerson(id);
+	}
+
 }

@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.rest.springmvc.model.Person;
 import com.rest.springmvc.services.PersonService;
 
-@Controller
+@RestController
 public class PersonController 
 {
 	@Autowired
@@ -78,5 +79,15 @@ public class PersonController
 		if(person==null)
 			return new ResponseEntity<Person>(HttpStatus.NOT_FOUND);
 		return new ResponseEntity<Person>(updatedPerson,HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/person/{id}", method=RequestMethod.DELETE)
+	public ResponseEntity<Void> deletePerson(@PathVariable int id)
+	{
+		Person person=personService.getPersonById(id);
+		if (person==null)
+			return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+		personService.deletePerson(id);
+		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 }

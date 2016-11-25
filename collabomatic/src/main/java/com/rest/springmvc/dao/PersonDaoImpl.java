@@ -66,4 +66,13 @@ public class PersonDaoImpl implements PersonDao
 		session.close();
 		return updatedPerson;
 	}
+
+	public void deletePerson(int id) {
+		Session session=sessionFactory.openSession();
+		Person person=(Person)session.get(Person.class,id); //persistent - person
+		session.delete(person);
+		//transient - person
+		session.flush();
+		session.close();
+	}
 }

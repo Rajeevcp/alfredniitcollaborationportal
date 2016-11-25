@@ -10,4 +10,5 @@ public interface PersonService
 	Person getPersonById(int id);
 	void savePerson(Person person);
 	Person updatePerson(int id,Person person);
+	void deletePerson(int id);
 }
