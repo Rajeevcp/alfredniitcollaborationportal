@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>name</title>
+</head>
+<body>
+sorted by name:<br>
+<div class="container">
+<ul>
+<li ng-repeat= "p in persons | orderBy:'name' " >
+{{p.id}} {{p.name}} {{p.dob | date:'MM/dd/yyyy'}}
+</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dob</title>
+</head>
+<body>
+sorted by dob:<br><br>
+<div ng-repeat= "p in persons | orderBy:'dob' " >
+{{p.id}} {{p.name}} {{p.dob | date:'MM/dd/yyyy'}}
+</div>
+</body>
+</html>
