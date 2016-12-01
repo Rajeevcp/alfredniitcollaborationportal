@@ -5,9 +5,8 @@ app.controller('PersonController',function($scope,PersonService)
 	$scope.person={personId:'',name:'',email:'',phoneno:'',dob:''}
 	function fetchAllPersons()
 	{
-		console.log('entering fetchall persons in controller')
-		PersonService.fetchAllPersons()
-		.then
+		console.log('entering fetchallpersons in controller')
+		PersonService.fetchAllPersons().then
 		(
 				function(d)
 				{
@@ -20,4 +19,21 @@ app.controller('PersonController',function($scope,PersonService)
 		)
 	}
 	fetchAllPersons();
+	$scope.save=function()
+	{
+		console.log('entering the function save() in person controller')
+		// $scope.person - values entered by the client in the form
+		PersonService.savePerson($scope.person).then
+		(
+		function(d)
+		{
+			console.log(d.status)
+			fetchAllPersons();
+		},
+		function(d)
+		{
+			console.log(d.status)
+		}
+		);
+	}
 })

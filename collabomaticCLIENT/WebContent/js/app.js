@@ -4,7 +4,13 @@ app.config(function($routeProvider)
 			console.log('Entering app configuration')
 			//http://localhost:8080/urapp/
 			$routeProvider
-		
+			
+			.when('/createPerson',
+			{
+			controller:'PersonController',
+			templateUrl:'pages/createPerson.html'
+			})
+			
 			.when('/listOfPersons',
 			{
 			controller:'PersonController',
