@@ -33,7 +33,7 @@ app.factory('PersonService',function($http)
 		.then(function(response)
 		{
 			console.log(response.status)
-			console.log(response.headers)
+			console.log(response.headers.location)
 			return response.status
 		},
 		function(response)
@@ -41,6 +41,23 @@ app.factory('PersonService',function($http)
 			console.log(response.status)
 			return response.status
 		})
-	}
+	};
+	
+	personService.deletePerson=function(id)
+	{
+		console.log("entering delete person in service with id " + id);
+		return $http.delete(BASE_URL + "/person/"+id)
+		.then(function(response)
+		{
+			console.log(response.status)
+			return response.status;
+		}
+		,
+		function(response)
+		{
+			console.log(response.status)
+		});
+
+	};
 	return personService;
 })

@@ -17,5 +17,11 @@ app.config(function($routeProvider)
 			templateUrl:'pages/listOfPersons.html'
 			})
 			
+			.when('/edit/:id',
+			{
+			controller:'EditController',
+			templateUrl:'pages/editPerson.html'
+			})
+			
 			.when('/',{templateUrl:'pages/home.html'})
 			})
