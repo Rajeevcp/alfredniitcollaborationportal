@@ -23,8 +23,8 @@
 	<td>{{value.email}}</td>
 	<td>{{value.phoneno}}</td>
 	<td>{{value.dob | date:'MM/dd/yyyy'}}</td>
-	<td><a href="#/edit/{{value.personId}}">Edit</a></td>
-	<td><a ng-click="deletePerson(value.personId)" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-trash"></span></a></td>
+	<td><a href="#/edit/{{value.personId}}" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></a></td>
+	<td><a ng-click="deletePerson(value.personId)" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></a></td>
 </tr>
 </table>
 </div>

@@ -8,6 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 @Table(name="persondemo")
 public class Person 
@@ -15,8 +18,11 @@ public class Person
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int personId;
+	//@NotEmpty
 	private String name;
+	//@NotEmpty
 	private String email;
+	//@Length(min=5,max=10)
 	private String phoneno;
 	private Date dob;
 

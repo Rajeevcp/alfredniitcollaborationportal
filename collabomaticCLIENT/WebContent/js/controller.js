@@ -29,13 +29,13 @@ app.controller('PersonController',function($scope,$location,PersonService)
 		function(d)
 		{
 			console.log(d.status)
-			fetchAllPersons();
+			fetchAllPersons(); //redirect
 			$location.path('/listOfPersons');
 		},
 		function(d)
 		{
 			console.log(d.status)
-			$scope.status="unable to insert into person details";
+			$scope.status="unable to insert into person details ";
 		}
 		);
 	}

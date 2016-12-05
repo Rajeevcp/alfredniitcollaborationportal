@@ -59,5 +59,18 @@ app.factory('PersonService',function($http)
 		});
 
 	};
+	
+	personService.getPerson=function(id)
+	{
+		return $http.get(BASE_URL + "/person/" + id)
+	};
+	
+	personService.updatePerson=function(personId,person)
+	{
+		console.log('update person in service')
+		console.log('person id' + personId)
+		return $http.put(BASE_URL + "/person/"+personId, person);
+	}
+	
 	return personService;
 })
