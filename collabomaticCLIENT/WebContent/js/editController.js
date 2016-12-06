@@ -31,17 +31,3 @@ console.log(response.status)
 }
 
 })
-
-/*{
-$scope.person=person	
-}
-);
-
-$scope.update=function()
-{
-PersonService.updatePerson(id,$scope.person).success(function()
-{
-	
-})
-$location.path('/')
-}*/

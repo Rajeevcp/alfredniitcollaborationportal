@@ -7,29 +7,31 @@
 <body>
 
 <form>
-
+<h3><font face="arial narrow" color="white"><u>Insert</u> the following details</font></h3>
 <table>
 <tr>
-	<td>Enter Name:</td>
+	<td><font face="arial narrow" size="3" color="white">Enter Name:</font></td>
 	<td><input type="text" ng-model="person.name"></td>
 </tr>
 <tr>
-	<td>Enter E-Mail:</td>
+	<td><font face="arial narrow" size="3" color="white">Enter E-Mail:</font></td>
 	<td><input type="text" ng-model="person.email"></td>
 </tr>
 <tr>
-	<td>Enter Phone no.:</td>
+	<td><font face="arial narrow" size="3" color="white">Enter Phone no.:</font></td>
 	<td><input type="text" ng-model="person.phoneno"></td>
 </tr>
 <tr>
-	<td>Enter dob:</td>
+	<td><font face="arial narrow" size="3" color="white">Enter Dob:</font></td>
 	<td><input type="text" ng-model="person.dob"></td>
-</tr>
-<tr>
-	<td><input type="submit" ng-click="save()" value="Insert"></td> <!-- search for  $scope.save in PersonController and call the function -->
 </tr>
 
 </table>
+<br>
+<input class="btn btn-primary" type="submit" ng-click="save()" value="Insert"> <!-- search for  $scope.save in PersonController and call the function -->
+
+
+
 
 </form>
 {{status}}

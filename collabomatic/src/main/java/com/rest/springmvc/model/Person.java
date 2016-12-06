@@ -18,11 +18,12 @@ public class Person
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int personId;
-	//@NotEmpty
+	@NotEmpty
 	private String name;
-	//@NotEmpty
+	@NotEmpty
 	private String email;
 	//@Length(min=5,max=10)
+	@NotEmpty
 	private String phoneno;
 	private Date dob;
 
