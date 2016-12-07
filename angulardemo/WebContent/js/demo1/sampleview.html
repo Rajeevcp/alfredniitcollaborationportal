@@ -8,6 +8,9 @@
 <div ng-app="personApp">
 <div ng-controller="PersonController">
 {{message}}
+<br><br>
+<button ng-click="login()" ng-hide="username">Login</button>
+<button ng-click="logout()" ng-show="username">Logout</button>
 </div>
 </div>
 </body>
