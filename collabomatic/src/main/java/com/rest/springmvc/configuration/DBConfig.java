@@ -18,7 +18,8 @@ import com.rest.springmvc.model.Test;
 
 @Configuration
 @EnableTransactionManagement
-public class DBConfig {    //creates an instance
+public class DBConfig 
+{    //creates an instance
 	@Bean
 	public SessionFactory sessionFactory() 
 	{
