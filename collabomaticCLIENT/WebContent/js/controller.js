@@ -7,7 +7,8 @@ app.controller('PersonController',function($scope,$location,PersonService)
 	function fetchAllPersons()
 	{
 		console.log('entering fetchallpersons in controller')
-		PersonService.fetchAllPersons().then
+		PersonService.fetchAllPersons()
+		.then
 		(
 				function(d)
 				{
@@ -20,11 +21,13 @@ app.controller('PersonController',function($scope,$location,PersonService)
 		)
 	}
 	fetchAllPersons();
+	
 	$scope.save=function()
 	{
 		console.log('entering the function save() in person controller')
 		// $scope.person - values entered by the client in the form
-		PersonService.savePerson($scope.person).then
+		PersonService.savePerson($scope.person)
+		.then
 		(
 		function(d)
 		{

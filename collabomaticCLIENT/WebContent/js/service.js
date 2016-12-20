@@ -29,8 +29,7 @@ app.factory('PersonService',function($http)
 	personService.savePerson=function(person)
 	{
 		console.log('entering save person in service')
-		return $http.post(BASE_URL + "/person",person)
-		.then(function(response)
+		return $http.post(BASE_URL + "/person",person).then(function(response)
 		{
 			console.log(response.status)
 			console.log(response.headers.location)
