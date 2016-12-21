@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insertion</title>
+</head>
+<body>
+
+<form>
+
+<table>
+<tr>
+	<td>Enter Job Title:</td>
+	<td><input type="text" ng-model="job.jobTitle"></td>
+</tr>
+<tr>
+	<td>Enter Job Description:</td>
+	<td><textarea ng-model="job.jobDescription"></textarea></td>
+</tr>
+<tr>
+	<td>Enter Salary:</td>
+	<td><input type="text" ng-model="job.salary"></td>
+</tr>
+<tr>
+	<td>Enter Required Skills:</td>
+	<td><input type="text" ng-model="job.skillsRequired"></td>
+</tr>
+<tr>
+	<td>Enter Location</td>
+	<td><input type="text" ng-model="job.location"></td>
+</tr>
+<tr>
+	<td><input type="submit" ng-click="saveJob()" value="Insert"></td> <!-- search for  $scope.save in jobController and call the function -->
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html> 
