@@ -1,0 +1,4 @@
+com\niit\backend\configuration\DBConfig.class
+com\niit\backend\configuration\WebAppInitializer.class
+com\niit\backend\model\User.class
+com\niit\backend\configuration\WebAppConfig.class
