@@ -69,7 +69,7 @@ public ResponseEntity<?> registerUser(@RequestBody User user)
 	catch(Exception e)
 	{
 		e.printStackTrace();
-		Error error=new Error(2,"Couldn't insert user details. These fields cannot have null/duplicate values. " + e.getMessage());
+		Error error=new Error(2,"Couldn't insert user details. These fields cannot have null/duplicate values. "); /* + e.getMessage());*/
 		return new ResponseEntity<Error>(error , HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }
