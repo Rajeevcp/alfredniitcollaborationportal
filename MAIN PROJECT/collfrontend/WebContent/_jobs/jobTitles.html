@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Job titles</title>
+</head>
+
+<body>
+<div class="w3-animate-opacity">
+<font face="arial narrow" size="4">
+<center>
+<h2><strong><u>List of Job Titles available:</u></strong></h2>
+<br>
+<table>
+
+<tr ng-repeat="job in jobs">
+<td>
+<a href="" ng-click="getJobDetail(job.jobId)">{{job.jobTitle}}</a>
+</td>
+</tr>
+
+</table>
+</center>
+<br><br>
+
+
+<div ng-show="showJobDetail">
+<div class="w3-animate-opacity">
+<b><u>Job Details:</u></b><br>
+Job title: {{jobDetail.jobTitle}}<br><br>
+Job Description: {{jobDetail.jobDescription}}<br><br>
+Skills Required: {{jobDetail.skillsRequired}}<br><br>
+Salary: {{jobDetail.salary}}<br><br>
+<!-- Location: {{jobDetail.location}}<br><br> -->
+</div>
+</div>
+</font>
+
+</div>
+</body>
+</html>

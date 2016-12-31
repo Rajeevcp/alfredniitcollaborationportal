@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List of users</title>
+</head>
+<body>
+<div class="w3-animate-opacity">
+<center>
+<h2><strong>People whom you may know...</strong></h2>
+<p>Here are a list of people whom you may be familiar with or are your friends. How about sending a friend request to them, so that you can collaborate...</p>
+<br>
+<div class="container">
+<table class="table table-responsive" height="50px" width="1200px" >
+
+<tr>
+<th>Username</th>
+<th>E-mail</th>
+<th>Online</th>
+<th>Role</th>
+<th>Friend Request</th>
+</tr>
+
+<tr ng-repeat="u in users">
+<td>{{u.username}}</td>
+<td>{{u.email}}</td>
+<td ng-if="u.online">Yes</td>
+<td ng-if="!u.online">No</td>
+<td>{{u.role}}</td>
+<td><button ng-click="friendRequest(u.username)" type="button" class="btn btn-success btn-md">Send a Friend Request</button></td>
+</tr>
+
+</table>
+</div>
+
+</center>
+</div>
+</body>
+</html>
