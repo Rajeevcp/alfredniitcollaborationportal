@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"  />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<title>COLLAB-O'-MATIC</title>
+</head>
+<style>
+body
+{
+padding-top:135px;
+background-image: url("images/hands.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center; 
+background-size: cover; 
+}
+.footer
+{
+    border-top: 1px solid rgba(255,255,255,.4);
+	background: linear-gradient(to bottom,rgba(0,0,0,0.4) 0,#000 100%);
+}
+.footer li.cat
+{
+    padding-top: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.footer li a
+{
+	font-size: 12px;
+    color: #9E9EA6;
+    text-decoration: none;
+}
+.navbar-fixed-top
+{
+   padding-top:14px;
+   padding-bottom:14px;
+}
+</style>
+
+
+<body ng-app="myApp">
+
+<font face="arial narrow" size="3">
+
+<div class="navbar-wrapper">
+<div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top w3-animate-opacity">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#/home"><font face="stencil" size="5" color="white">COLLAB-O'-MATIC</font></a>
+			</div>
+			<div id="navbar-collapse" class="collapse navbar-collapse">
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/home"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+					<li><a href="#/about" >About</a></li>
+					<li><a href="#/login" ng-hide="currentUser.id"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="#/register" ng-hide="currentUser.id">Register</a></li>
+					
+					<li ng-show="currentUser.id"><a href="#/chat">Chat</a></li>
+					
+					<li class="dropdown" ng-show="currentUser.id">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Blogging<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/getAllBlogs">View </a></li>
+							<li><a href="#/addPost">Add a new Post</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown" ng-show="currentUser.id">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" >Friends<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/getAllUsers">People you may know</a></li>
+							<li><a href="#/friendsList">Your Friends</a></li>
+							<li><a href="#/pendingRequest">Pending Friend requests</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown" >
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.id">Jobs<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/getAllJobs">List of Job Titles</a></li>
+							<li><a href="#/postJob" ng-show="currentUser.role=='ADMIN' || currentUser.role=='EMPLOYEE'">Post a Job</a></li>
+						</ul>
+					</li>
+					
+					&nbsp;<li ng-show="currentUser.id">
+					<img src="http://localhost:8181/collbackend/resources/images/{{currentUser.username}}"  class="img-circle" height="38" width="38">
+					</li>
+					
+					
+					
+					<li class="dropdown" >
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.id">Welcome, {{currentUser.username}} ! <span class="glyphicon glyphicon-user"></span><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+							<li><a href="#/uploadPicture" ng-show="currentUser.id">Profile Picture</a></li>
+						</ul>
+					</li>			
+				</ul>
+				
+			</div>
+		 </div>
+</nav>
+</div>
+</div>
+
+
+<div class="container">
+
+<div ng-view></div>
+
+</div>
+
+</font>
+
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="_user/usercontroller.js"></script>
+<script type="text/javascript" src="_user/userservice.js"></script>
+<script type="text/javascript" src="_jobs/jobcontroller.js"></script>
+<script type="text/javascript" src="_jobs/jobservice.js"></script>
+<script type="text/javascript" src="_friend/friendservice.js"></script>
+<script type="text/javascript" src="_friend/friendcontroller.js"></script>
+<script type="text/javascript" src="_blog/blogservice.js"></script>
+<script type="text/javascript" src="_blog/blogcontroller.js"></script>
+<script type="text/javascript" src="_blog/blogdetailcontroller.js"></script>
+<script type="text/javascript" src="_chat/chatservice.js"></script>
+<script type="text/javascript" src="_chat/chatcontroller.js"></script>
+	
+</html>
