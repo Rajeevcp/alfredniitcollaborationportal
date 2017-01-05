@@ -1,4 +1,3 @@
-(function(angular, SockJS, Stomp, _, undefined) {
 app.service("ChatService", function($q, $timeout) {
     
     var service = {}, listener = $q.defer(), socket = {
@@ -55,4 +54,3 @@ app.service("ChatService", function($q, $timeout) {
     initialize();
     return service;
   });
-})(angular, SockJS, Stomp, _);
