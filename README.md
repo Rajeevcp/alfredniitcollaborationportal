@@ -1,6 +1,6 @@
 # Collaboration portal based web app
 
-This project is based on a collaboration website which involves chatrooms, obtaining specific information, blogs and all there is to reach a common goal of what the client or the user needs.
+This project is based on a collaboration website which involves chatrooms, obtaining specific information, blogs, and all there is to reach a common goal of what the client or the user needs.
 
 One of the main centrepiece in this application is the implementation of **RESTful Web Services**. This gaurantees easy seperation of backend and frontend to be tested explicitly, sending and recieving data by means of HTTP methods and simple URI navigation techniques.
 
