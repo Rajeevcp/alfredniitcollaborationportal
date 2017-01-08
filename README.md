@@ -6,4 +6,4 @@ One of the main centrepiece in this application is the implementation of **RESTf
 
 The programming tool used is the **Eclipse IDE** and the programming language used is **Java**, alongside **Oracle Database, Spring and Hibernate frameworks** at it's backend. For testing the inputs and outputs in the **JSON** format at the backend, a tool named **'postman'** is explicitly used here. The frontend makes use of **HTML, CSS, Bootstrap** and **AngularJS**. The backend of this project is thus combined in a build tool called **Maven**, alongside **JUnit**, all together in a nutshell.
 
-To read about my detailed documentation, [Click here](https://github.com/alfredaugustin/alfredniitcollaborationportal/wiki)
+To read about my detailed documentation, [click here](https://github.com/alfredaugustin/alfredniitcollaborationportal/wiki)
