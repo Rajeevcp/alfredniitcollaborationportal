@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Post a blog</title>
+</head>
+
+<body>
+<div class="w3-animate-opacity">
+<center>
+<h2><strong>Add a new Blog</strong></h2><br>
+<p>Add a blog of your own topic and content based on that topic of your own choice. Your topic discussion could span a whole lot of more than a couple of sentences, or per se, a paragraph. Share your discussions on this platform and you could earn remarks to your own blogs by means of passing comments upfront to you by all the users.</p>
+</center>
+
+<br>
+<h3>Here is where you'll enter your discussion...</h3>
+<br>
+
+<form class="form-horizontal">
+<font face="arial narrow" size="3">
+
+
+Blog Title:<input type="text" placeholder="Enter the Topic" class="form-control" ng-model="blogPost.title"><br>
+
+Content:<textarea rows="10"  placeholder="Enter the Content" class="form-control" ng-model="blogPost.body"></textarea>
+
+<br>
+<button type="submit" class="btn btn-primary btn-block col-md-3" ng-click="submit()">Post</button>
+
+
+</form>
+<br><br><br><br><br>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Blog</title>
+</head>
+<body>
+
+<div class="w3-animate-opacity">
+<center>
+<h2><strong>Blogs</strong></h2>
+<p>Share your topics, discussions, and debates on this blogger page to interact with everyone. Here, you can communicate to everyone by asking a question, acquiring justifiable statements, and all there is to keep ourselves knowledgable and updated. We can also respond to these blogs via comments to appreciate, support or justify the discussions.</p>
+</center>
+
+<br>
+
+<div class="col-xs-3">
+Search By Title:
+<input type="text" class="form-control" ng-model="search.title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+<div class="col-xs-3">
+Search By Author:
+<input type="text" class="form-control" ng-model="search.createdBy.username">
+</div>
+
+<br><br><br><br>
+
+<div class="table-responsive">
+<table class="table">
+
+<tr>
+<th>Recent Posts</th>
+<th>Author</th>
+<th>Date and Time</th>
+</tr>
+
+<tr ng-repeat="blogPost in blogPosts | orderBy:'-date'| filter:search">
+<td><a href="#/getBlogDetail/{{blogPost.id}}">{{blogPost.title}}</a></td>
+<td>Created By : {{blogPost.createdBy.username}}</td>
+<td>Created On: {{blogPost.createdOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+</body>
+</html>

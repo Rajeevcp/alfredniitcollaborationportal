@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Profile Picture</title>
+</head>
+
+<body>
+<div class="container">
+<div class="w3-animate-opacity">
+<div align="center">
+
+<h2><strong>Profile Picture</strong></h2>
+<p>You can upload your profile picture here, so that your friends can see you online</p><br><br>
+        <form method="post" action="http://localhost:8181/collbackend/doUpload" enctype="multipart/form-data">
+          <strong>Choose a file to upload <i class="fa fa-upload" style="font-size:20px"></i></strong><br><br>
+          <input type="file" name="fileUpload" size="50" />
+          <br><br>
+          <!-- <button type="button" class="btn btn-success btn-lg"><i class="fa fa-upload"></i> Upload</button> -->
+          <input type="submit" class="btn btn-success btn-lg" value="Upload" />
+        </form>
+</div>
+</div>
+</div>
+</body>
+
+</html>
