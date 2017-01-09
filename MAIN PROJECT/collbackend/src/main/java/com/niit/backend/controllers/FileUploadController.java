@@ -58,7 +58,7 @@ public class FileUploadController
             	byte[] imagefiles=getUploadFile.getData();  				//image
             	try
             	{														//change the path according to your workspace and the name of your project
-            		String path="C:/Users/Alfred/Desktop/alfredniitcollaborationportal-master/collbackend/src/main/webapp/WEB-INF/resources/images/"+user.getUsername();
+            		String path="C:/Users/Alfred/Desktop/alfredniitcollaborationportal/alfredniitcollaborationportal/MAIN PROJECT/collbackend/src/main/webapp/WEB-INF/resources/images/"+user.getUsername();
             		File file=new File(path);								//file.mkdirs();
             		FileOutputStream fos = new FileOutputStream(file);
             		fos.write(imagefiles);									// write the array of bytes in username file.

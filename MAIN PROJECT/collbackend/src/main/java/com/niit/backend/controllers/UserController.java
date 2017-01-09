@@ -60,7 +60,7 @@ public ResponseEntity<?> login(@RequestBody User user,HttpSession session) throw
 	  	byte[] imagefiles=getUploadFile.getData();
 	  	try
 	  	{
-	  		String path="C:/Users/Alfred/Desktop/alfredniitcollaborationportal-master/collbackend/src/main/webapp/WEB-INF/resources/images/"+user.getUsername();
+	  		String path="C:/Users/Alfred/Desktop/alfredniitcollaborationportal/alfredniitcollaborationportal/MAIN PROJECT/collbackend/src/main/webapp/WEB-INF/resources/images/"+user.getUsername();
 	  		File file=new File(path);										//file.mkdirs();
 	  		FileOutputStream fos = new FileOutputStream(file);				//to Write some data 
 	  		fos.write(imagefiles);
@@ -116,7 +116,7 @@ public ResponseEntity<?> logout(HttpSession session)
 		try
 		{
         //change according to your workspace path and project name
-		String path="C:/Users/Alfred/Desktop/alfredniitcollaborationportal-master/collbackend/src/main/webapp/WEB-INF/resources/images/"+user.getUsername();
+		String path="C:/Users/Alfred/Desktop/alfredniitcollaborationportal/alfredniitcollaborationportal/MAIN PROJECT/collbackend/src/main/webapp/WEB-INF/resources/images/"+user.getUsername();
 		File file=new File(path);
 		System.out.println(file.delete());
 		}
