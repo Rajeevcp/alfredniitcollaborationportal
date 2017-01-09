@@ -6,7 +6,8 @@ app.controller('BlogDetailController',function($routeParams,$scope,BlogService)
 	$scope.comment={body:'',blogPost:{}}
 													//instead of writing function and calling explicitly, we can call the service function directly
 	$scope.blogPost=BlogService.getBlogDetail(id) 	//calling service function directly
-		.then(function(response)
+		.then(
+		function(response)
 		{
 			console.log(response.data);
 			console.log(response.status)
@@ -17,6 +18,7 @@ app.controller('BlogDetailController',function($routeParams,$scope,BlogService)
 		function(response)
 		{
 			console.log(response.status)
+			$location.path('/login')
 		})
 	
 		$scope.editPost=function()

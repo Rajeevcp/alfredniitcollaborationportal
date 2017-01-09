@@ -45,6 +45,7 @@ app.controller('JobController',function($scope,$location,$routeParams,JobService
 		function(response)
 		{
 			console.log(response.status)
+			$location.path('/login')
 		})
 	}
 	getAllJobs();
@@ -62,6 +63,7 @@ app.controller('JobController',function($scope,$location,$routeParams,JobService
 		function(response)
 		{
 			console.log(response.status)
+			$location.path('/login')
 		})
 	}
 	

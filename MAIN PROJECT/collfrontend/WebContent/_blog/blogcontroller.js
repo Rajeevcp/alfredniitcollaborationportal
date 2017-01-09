@@ -19,6 +19,7 @@ app.controller('BlogController',function($scope,$location,BlogService)
 		{
 			console.log(response.data);
 			console.log(response.status);
+			$location.path('/login')
 		})
 	}
 	
@@ -34,5 +35,6 @@ app.controller('BlogController',function($scope,$location,BlogService)
 	{
 		console.log(response.status)
 		console.log(response.data)
+		$location.path('/login')
 	})
 })
