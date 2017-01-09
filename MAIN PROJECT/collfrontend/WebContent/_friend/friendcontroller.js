@@ -46,6 +46,7 @@ app.controller('FriendController',function($scope,$location,FriendService)
 			else
 			{
 			alert('You have denied the friend request')
+			$location.path('/getAllUsers')
 			}
 		}
 		,
