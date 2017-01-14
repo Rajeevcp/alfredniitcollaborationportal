@@ -1,4 +1,4 @@
-# **COLLAB-O'-MATIC - A Collaboration Portal based web app**
+# **COLLAB-O'-MATIC - A Collaboration Portal based web app :satisfied: **
 
 This project is based on a collaboration website which involves chatrooms, obtaining specific information, blogs, and all there is to reach a common goal of what the client or the user needs.
 
